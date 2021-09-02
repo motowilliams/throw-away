@@ -10,6 +10,7 @@ RUN apt-get update &&          \
     gnupg                      \
     gnupg-agent                \
     lsb-release                \
+    jq                         \
     python3                    \
     python3-pip                \
     rsync                      \
