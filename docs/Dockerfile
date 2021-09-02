@@ -2,20 +2,19 @@ FROM debian:latest
 
 ENV PYTHONUNBUFFERED=1
 
-RUN apt-get update &&          \
-    apt-get install -y -qq     \
-    apt-transport-https        \
-    ca-certificates            \
-    curl                       \
-    gnupg                      \
-    gnupg-agent                \
-    lsb-release                \
-    jq                         \
-    python3                    \
-    python3-pip                \
-    rsync                      \
+RUN apt-get update && \
+    apt-get install -y -qq \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    gnupg-agent \
+    lsb-release \
+    python3 \
+    python3-pip \
+    rsync \
     software-properties-common \
-    tar                        \
+    tar \
     zip
 
 # Docker apt repo
