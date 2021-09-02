@@ -39,6 +39,7 @@ jobs:
       - name: Build Docs
         run: |
           mkdir -p public/site
+          ls -lah
           cp docs/content/index.html public/site/
       - name: Deploy
         uses: s0/git-publish-subdir-action@v2.5.0
