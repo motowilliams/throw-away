@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  docker:
+  docker_publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,6 +31,7 @@ jobs:
             ghcr.io/${{ github.repository }}
 
   container:
+    needs: docker_publish
     runs-on: ubuntu-latest
     container: ghcr.io/${{ github.repository }}
 
