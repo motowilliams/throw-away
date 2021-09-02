@@ -28,19 +28,13 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-        env:
-          REGISTRY: ghcr.io
-          IMAGE_NAME: ${{ github.repository }}
+            ghcr.io/${{ github.repository }}
 
   container:
     runs-on: ubuntu-latest
-    container: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+    container: ghcr.io/${{ github.repository }}
 
     steps:
       - name: Run in container - list user local bin
         run: |
           ls -lah /usr/local/bin
-        env:
-          REGISTRY: ghcr.io
-          IMAGE_NAME: ${{ github.repository }}
