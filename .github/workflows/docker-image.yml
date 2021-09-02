@@ -35,3 +35,11 @@ jobs:
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+  container:
+    runs-on: ubuntu-latest
+    container: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+    steps:
+      - name: Run in container - list user local bin
+        run: |
+          ls -lah /usr/local/bin
