@@ -36,6 +36,14 @@ jobs:
     container: ghcr.io/${{ github.repository }}
 
     steps:
-      - name: Run in container - list user local bin
+      - name: Build Docs
         run: |
-          ls -lah /usr/local/bin
+          mkdir -p public/site
+          cp docs/content/index.html public/site/
+      - name: Deploy
+        uses: s0/git-publish-subdir-action@v2.5.0
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: public/site
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
