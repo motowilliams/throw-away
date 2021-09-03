@@ -7,10 +7,10 @@ root = true
 [*]
 insert_final_newline = true
 
-[*.sh]
+[*.{sh}]
 end_of_line = lf
 
-[*.ps1]
+[*.{ps1,yml}]
 end_of_line = crlf
 
 # Trim tailing whitespace

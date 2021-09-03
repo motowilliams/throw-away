@@ -1,8 +1,8 @@
-site_name: !ENV [SITE_NAME, "my github pages site"]
-site_url: !ENV [SITE_URL, ""]
+site_name: !ENV [SITE_NAME, "throw-away"]
+site_url: !ENV [SITE_URL, "https://github.com/motowilliams/throw-away"]
 site_dir: !ENV [SITE_DIR, "site"]
 docs_dir: !ENV [DOCS_DIR, "content"]
-repo_url: !ENV [REPO_URL, ""]
+repo_url: !ENV [REPO_URL, "https://github.com/motowilliams/throw-away"]
 theme: material
 
 plugins:

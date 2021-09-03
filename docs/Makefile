@@ -1,7 +1,7 @@
 export DOCS_DIR_NAME ?= content
 export DOCS_SRC ?= docs
 export PUBLISH_DIR ?= public
-export REPO_URL ?= https://example.com/repo
+export REPO_URL ?= https://github.com/motowilliams/throw-away
 export SITE_DIR ?= site
 export SITE_NAME ?= my github pages site
 export PROTOCOL ?= http
